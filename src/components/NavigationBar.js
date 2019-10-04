@@ -8,10 +8,10 @@ const Styles = styled.div`
     }
 
     .navbar-brand, .navbar-nav, .nav-link {
-        color: #bbb;
+        color: #white;
 
         &:hover {
-            background-color: red;
+            background-color: blue;
             color: white;
         }
     }

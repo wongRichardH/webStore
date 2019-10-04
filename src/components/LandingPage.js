@@ -7,6 +7,7 @@ import Gallery from 'react-photo-gallery'
 import pic1 from '../assets/examplePic1.jpg';
 import pic2 from '../assets/examplePic2.jpg';
 import pic3 from '../assets/examplePic3.jpg';
+import pic4 from '../assets/examplePic4.jpg';
 
 const Styles = styled.div`
 
@@ -16,32 +17,47 @@ const Styles = styled.div`
         background-color:blue;
     }
 
-    .img:hover {
+    /* .img:hover {
         border: 50px solid black;
-    }
+    } */
 `;
 
 export const photos = [
-    // {
-    //   src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-    //   width: 4,
-    //   height: 3
-    // },
-    // {
-    //   src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-    //   width: 1,
-    //   height: 1
-    // },
     {
-      src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-      width: 3,
+        src: pic1,
+        width: 3,
+        height: 4
+      },
+    {
+      src: pic2,
+      width: 6,
       height: 4
     },
     {
-      src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-      width: 3,
-      height: 4
+    src: pic3,
+    width: 8,
+    height: 9
     },
+    {
+        src: pic4,
+        width: 8,
+        height: 12
+        },
+    
+  ];
+
+  export const photos2 = [
+    {
+    src: pic3,
+    width: 8,
+    height: 9
+    },
+    {
+        src: pic4,
+        width: 8,
+        height: 12
+        },
+    
   ];
 
 export const LandingPage = () => (
@@ -57,9 +73,9 @@ export const LandingPage = () => (
     //     </Container>
     // </Styles>
 
-    <Gallery photos={photos} direction={"column"}> 
 
-    </Gallery>
-
-
+        <React.Fragment>
+            <Gallery photos={photos2} direction={"row"}> </Gallery>
+            <Gallery photos={photos} direction={"column"} columns={2}> </Gallery>
+        </React.Fragment>
 )
