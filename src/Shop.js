@@ -10,6 +10,13 @@ export const Shop = () => {
                 <Col> <ItemPreviewCard/> </Col>
                 <Col> <ItemPreviewCard/> </Col>
             </Row>
+
+
+            <Row>
+                <Col> <ItemPreviewCard/> </Col>
+                <Col> <ItemPreviewCard/> </Col>
+                <Col> <ItemPreviewCard/> </Col>
+            </Row>
         </Container>
     )
 }
