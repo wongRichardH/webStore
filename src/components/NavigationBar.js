@@ -12,10 +12,11 @@ const Styles = styled.div`
             background-color: blue;
             color: white;
     }
+`;
 
-    /* .navbar-text {
-        color:red;
-    } */
+const NavItemStyle = styled(Nav.Link)`
+    color: #blue;
+    font-size: 1em;
 `;
 
 export const NavigationBar = () => (
@@ -25,10 +26,10 @@ export const NavigationBar = () => (
             <Navbar.Toggle aria-controls = "basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className = "ml-auto">
-                    <Nav.Item><Nav.Link href="/"> Home </Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/"> Shop </Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/about"> About </Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/contact"> Contact </Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/"> HOME </Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/shop"> SHOP </Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/about"> ABOUT </Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/contact"> CONTACT </Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
