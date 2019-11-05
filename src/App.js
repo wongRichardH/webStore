@@ -4,12 +4,10 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Home} from './Home';
 import {About} from './About';
 import {Contact} from './Contact';
-import {Shop} from './Shop';
+import Shop from './Shop';
 import {NoMatch} from './NoMatch';
 import {Layout} from './components/Layout';
 import {NavigationBar} from './components/NavigationBar';
-import {Jumbotron} from './components/Jumbotron';
-import {LandingPage} from './components/LandingPage';
 
 function App() {
   return (

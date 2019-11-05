@@ -14,10 +14,10 @@ const Styles = styled.div`
     }
 `;
 
-const NavItemStyle = styled(Nav.Link)`
-    color: #blue;
-    font-size: 1em;
-`;
+// const NavItemStyle = styled(Nav.Link)`
+//     color: #blue;
+//     font-size: 1em;
+// `;
 
 export const NavigationBar = () => (
     <Styles>
