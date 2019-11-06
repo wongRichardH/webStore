@@ -21,8 +21,8 @@ class ItemPreviewCard extends Component {
     render() {
         return (
             <Styles>
-                <Card>
-                    <Card.Img variant="top" src={pic1} />
+                <Card style= {{ width: '18rem'}}>
+                    <Card.Img variant="top" src={this.props.img} />
                         <Card.Body>
                             <Card.Title bsPrefix="poo">{this.props.name}</Card.Title>
                             <Card.Text style={{fontSize: 10}}>

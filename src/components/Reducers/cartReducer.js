@@ -8,7 +8,7 @@ import Item5 from '../../assets/Item5.png';
 const initState = {
     items: [
         {id:1,title:'Winter Body', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:110, img: Item0},
-        {id:2,title:'Adidas', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:80,img: Item1},
+        {id:2,title:'Adidas', desc: "Adidas Adidas Adidas Adidas Adidas Adidas Adidas", price:80,img: Item1},
         {id:3,title:'Vans', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",price:120,img: Item2},
         {id:4,title:'White', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:260,img:Item3},
         {id:5,title:'Cropped-shoes', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:160,img: Item4},

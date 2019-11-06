@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ItemPreviewCard from './components/ItemPreviewCard';
-import { Container, Col , Row} from 'react-bootstrap';
+import {Container, Col , Row, CardDeck, CardGroup} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 
@@ -32,9 +32,9 @@ class Shop extends Component {
         })
 
         return (
-            <div>
+            <CardGroup>
                 {itemList}}
-            </div>
+            </CardGroup>
         )
     }
 }
