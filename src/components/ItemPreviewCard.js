@@ -2,8 +2,7 @@ import React, {Component, Redirect} from 'react'
 import {Card, Button} from 'react-bootstrap';
 import styled from 'styled-components';
 
-import pic1 from '../assets/examplePic1.jpg';
-// import { ReactComponent } from '*.svg';
+import {Link, NavLink} from 'react-router-dom';
 
 const Styles = styled.div`
 
@@ -18,23 +17,12 @@ class ItemPreviewCard extends Component {
 
     constructor(props) {
         super(props);
-
-        this.openItemDetailsPage = this.openItemDetailsPage.bind(this);
-    }
-
-    openItemDetailsPage() {
-        // alert(this.props.id)
-
-        let newPath = `/itemdetails`;
-
-        // render() {
-        //     return <Redirect to={newPath}/>
-        // } 
     }
 
     render() {
         return (
             <Styles>
+            <NavLink to={`/shop/${this.props.name}`}> 
                 <StyledCard onClick={(this.openItemDetailsPage)} style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={this.props.img} />
                         <Card.Body>
@@ -42,14 +30,12 @@ class ItemPreviewCard extends Component {
                             <Card.Text style={{fontSize: 10}}>
                             {this.props.desc}
                             </Card.Text>
-                            {/* <Button variant="primary">Go somewhere</Button> */}
                         </Card.Body>
                 </StyledCard>
+            </NavLink>
             </Styles>
         )
     }
 }
-
-
 
 export default ItemPreviewCard;

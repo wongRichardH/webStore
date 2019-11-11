@@ -1,10 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
-export const ItemDetails = () => {
+
+export const ItemDetails = ({match}) => {
     return (
         <div>
             <h2>ItemDetails</h2>
-            <p> item details go here</p>
+            <p> {match.params.itemID}</p>
         </div>
     )
 }
+

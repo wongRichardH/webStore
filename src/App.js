@@ -22,11 +22,11 @@ function App() {
 
             {/* Routes add ability to go to this webpage */}
 
-            <Route exact path = "/" component= {Home}></Route>
-            <Route exact path = "/shop" component= {Shop}></Route>
-            <Route exact path = "/about" component= {About}></Route>
-            <Route exact path = "/contact" component= {Contact}></Route>
-            <Route path = "/itemdetails" component= {ItemDetails}></Route>
+            <Route path = "/" exact component= {Home}></Route>
+            <Route path = "/about" exact component= {About}></Route>
+            <Route path = "/contact" exact component= {Contact}></Route>
+            <Route path = "/shop" exact component= {Shop}></Route>
+            <Route path = "/shop/:itemID" exact strict component= {ItemDetails}></Route>
 
             <Route component={NoMatch}></Route>
           </Switch>
