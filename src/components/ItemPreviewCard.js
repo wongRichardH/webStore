@@ -23,7 +23,7 @@ class ItemPreviewCard extends Component {
         return (
             <Styles>
             <NavLink to={`/shop/${this.props.name}`}> 
-                <StyledCard onClick={(this.openItemDetailsPage)} style={{ width: '18rem' }}>
+                <StyledCard style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={this.props.img} />
                         <Card.Body>
                             <Card.Title>{this.props.name}</Card.Title>
