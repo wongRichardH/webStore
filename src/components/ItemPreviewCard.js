@@ -22,7 +22,10 @@ class ItemPreviewCard extends Component {
     render() {
         return (
             <Styles>
-            <NavLink to={`/shop/${this.props.name}`}> 
+            <NavLink to={{
+                pathname: `/shop/${this.props.name}`,
+                search: `?id=${this.props.id}`
+                }}> 
                 <StyledCard style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={this.props.img} />
                         <Card.Body>
