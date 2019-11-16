@@ -4,10 +4,6 @@ import styled from 'styled-components';
 
 import {Link, NavLink} from 'react-router-dom';
 
-const Styles = styled.div`
-
-
-`;
 
 const StyledCard = styled(Card)`
     text-align: center;
@@ -21,9 +17,8 @@ class ItemPreviewCard extends Component {
 
     render() {
         return (
-            <Styles>
             <NavLink to={{
-                pathname: `/shop/${this.props.name}`,
+                pathname: `/shop/${this.props.id}`,
                 search: `?id=${this.props.id}`
                 }}> 
                 <StyledCard style={{ width: '18rem' }}>
@@ -36,7 +31,6 @@ class ItemPreviewCard extends Component {
                         </Card.Body>
                 </StyledCard>
             </NavLink>
-            </Styles>
         )
     }
 }

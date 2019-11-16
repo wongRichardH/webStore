@@ -10,7 +10,12 @@ class Shop extends Component {
         
         let itemList = this.props.items.map(item => {
             return (
-                <ItemPreviewCard key={item.id} id={item.id} name={item.title} desc={item.desc} price={item.price} img={item.img}/>
+                <ItemPreviewCard key={item.id} 
+                id={item.id} 
+                name={item.title} 
+                desc={item.desc} 
+                price={item.price} 
+                img={item.img}/>
             ) 
         })
 
