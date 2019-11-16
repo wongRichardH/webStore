@@ -1,14 +1,14 @@
 import React from 'react';
 // import Navbar from 'react-bootstrap/Navbar';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {Home} from './Home';
-import {About} from './About';
-import {Contact} from './Contact';
-import Shop from './Shop';
-import ItemDetails from './ItemDetails';
+import {Home} from './components/Home';
+import {About} from './components/About';
+import {Contact} from './components/Contact';
+import Shop from './components/Shop/Shop';
+import ItemDetails from './components/Shop/ItemDetails';
 
 
-import {NoMatch} from './NoMatch';
+import {NoMatch} from './components/NoMatch';
 import {Layout} from './components/Layout';
 import {NavigationBar} from './components/NavigationBar';
 

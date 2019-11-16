@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ItemPreviewCard from './components/ItemPreviewCard';
+import ItemPreviewCard from './ItemPreviewCard';
 import {Container, Col , Row, CardDeck, CardGroup} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
