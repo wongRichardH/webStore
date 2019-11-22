@@ -9,26 +9,21 @@ class ItemDetails extends Component {
 
     render() {
 
-        // const foundClothingItem = this.props.foundItem ? (
-
-        //     console.log({foundClothingItem})
-        //     <div> FOUND </div>
-            
-                
-        // ) : (
-        //     <div> Loading Post </div>
-        // )
-
-
         var foundClothingItem = this.props.foundItem;
 
         if (foundClothingItem) {
             foundClothingItem = (
-            <div> <h2> {foundClothingItem.title} </h2> </div>
+            <div> 
+                <h2> {foundClothingItem.title} </h2> 
+                <h2> {foundClothingItem.desc} </h2> 
+
+            </div>
             ) 
         } else {
             foundClothingItem = (
-                <div> <h2> not found </h2> </div>
+                <div> 
+                    <h2> not found </h2> 
+                </div>
             ) 
         }
 

@@ -9,7 +9,7 @@ const initState = {
     items: [
         {id:1,
             title:'Winter Body', 
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
+            desc: "Winter Body Description", 
             price:110, 
             img: Item0},
 
@@ -21,25 +21,25 @@ const initState = {
 
         {id:3,
             title:'Vans', 
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+            desc: "Vans Vans Vans Vans Vans Vans Vans Vans Vans Vans Vans Vans.",
             price:120,
             img: Item2},
 
         {id:4,
             title:'White', 
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
+            desc: "WhiteWhiteWhiteWhiteWhiteWhiteWhiteWhite", 
             price:260,
             img:Item3},
 
         {id:5,
             title:'Cropped-Shoes', 
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
+            desc: "Cropped-ShoesCropped-ShoesCropped-ShoesCropped-ShoesCropped-Shoes", 
             price:160,
             img: Item4},
 
         {id:6,
             title:'Blues', 
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+            desc: "BluesBluesBluesBluesBlues",
             price:90,
             img: Item5}
     ],
