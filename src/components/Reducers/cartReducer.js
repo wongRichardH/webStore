@@ -7,8 +7,8 @@ import Item5 from '../../assets/Item5.png';
 
 const initState = {
     items: [
-        {id:1
-            ,title:'Winter Body', 
+        {id:1,
+            title:'Winter Body', 
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
             price:110, 
             img: Item0},

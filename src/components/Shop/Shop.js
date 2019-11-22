@@ -8,20 +8,20 @@ class Shop extends Component {
 
     render() {
         
-        let itemList = this.props.items.map(item => {
+        let catalogItems = this.props.catalog.map(eachItem => {
             return (
-                <ItemPreviewCard key={item.id} 
-                id={item.id} 
-                name={item.title} 
-                desc={item.desc} 
-                price={item.price} 
-                img={item.img}/>
+                <ItemPreviewCard key={eachItem.id} 
+                id={eachItem.id} 
+                name={eachItem.title} 
+                desc={eachItem.desc} 
+                price={eachItem.price} 
+                img={eachItem.img}/>
             ) 
         })
 
         return (
             <CardGroup>
-                {itemList}
+                {catalogItems}
             </CardGroup>
         )
     }
@@ -29,7 +29,7 @@ class Shop extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        items: state.items
+        catalog: state.items
     }
 }
 
