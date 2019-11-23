@@ -19,7 +19,7 @@ class ItemPreviewCard extends Component {
         return (
             <NavLink to={{
                 pathname: `/shop/${this.props.id}`,
-                search: `?id=${this.props.id}`
+                // search: `?id=${this.props.id}`
                 }}> 
                 <StyledCard style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={this.props.img} />

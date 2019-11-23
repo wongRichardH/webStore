@@ -1,6 +1,8 @@
 import React, {Component}  from 'react'
 import { connect } from 'react-redux';
 
+import ThumbnailGallery from './ThumbnailGallery';
+
 class ItemDetails extends Component {
 
     componentDidMount() {
@@ -19,6 +21,7 @@ class ItemDetails extends Component {
 
             </div>
             ) 
+
         } else {
             foundClothingItem = (
                 <div> 
@@ -31,6 +34,7 @@ class ItemDetails extends Component {
             <div>
                 {foundClothingItem}
 
+                <ThumbnailGallery/>
                 {this.props.match.params.itemID}
             </div>
         )

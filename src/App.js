@@ -5,7 +5,7 @@ import {Home} from './components/Home';
 import {About} from './components/About';
 import {Contact} from './components/Contact';
 import Shop from './components/Shop/Shop';
-import ItemDetails from './components/Shop/ItemDetails';
+import ItemDetails from './components/Shop/ItemDetails/ItemDetails';
 
 
 import {NoMatch} from './components/NoMatch';
