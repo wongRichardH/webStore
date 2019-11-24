@@ -9,9 +9,20 @@ import '../../../index';
 // `;
 
 class ThumbnailGallery extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        console.log(this.props.productDetails.desc)
+        // console.log(this.props.desc)
+    }
+
     render() {
         return (
-            <ActiveThumbnailWindow/>
+            
+            <ActiveThumbnailWindow activeImage= {this.props.productDetails.img}/>
+            //insert grid below this
         )
     }
 }

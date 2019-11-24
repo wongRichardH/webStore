@@ -11,7 +11,9 @@ const initState = {
             title:'Winter Body', 
             desc: "Winter Body Description", 
             price:110, 
-            img: Item0},
+            img: Item0,
+            otherImages: [Item1, Item2, Item3, Item4]
+        },
 
         {id:2,
             title:'Adidas',

@@ -1,8 +1,8 @@
-import React, {Component, Redirect} from 'react'
-import {Card, Button} from 'react-bootstrap';
+import React, {Component} from 'react'
+import {Card} from 'react-bootstrap';
 import styled from 'styled-components';
 
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 const StyledCard = styled(Card)`
