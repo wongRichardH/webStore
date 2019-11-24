@@ -1,5 +1,6 @@
 import React  from 'react'
 import styled from 'styled-components';
+import '../../../index';
 
 // const styledImg = styled.img `
 //     /* max-width: 100%; */
@@ -9,6 +10,9 @@ import styled from 'styled-components';
 
 // `
 
+// var imgStyle = {
+//     max-width: '100%';
+// };
 
 
 
@@ -19,7 +23,9 @@ const ActiveThumbnailWindow = (props) => {
 
     return (
         <div class = "activeThumbnail">
-            <img src = {props.activeImage} />
+            <img class="active" style={{width:"1"}} src = {props.activeImage} />
+
+            text
         </div>
 
         // <div> Active Thumbnail Window </div>

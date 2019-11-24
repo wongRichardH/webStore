@@ -21,7 +21,7 @@ class ThumbnailGallery extends Component {
     render() {
         return (
             
-            <ActiveThumbnailWindow activeImage= {this.props.productDetails.img}/>
+            <ActiveThumbnailWindow class="gallery" activeImage= {this.props.productDetails.img}/>
             //insert grid below this
         )
     }
