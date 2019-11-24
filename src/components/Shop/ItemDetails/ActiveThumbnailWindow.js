@@ -22,7 +22,7 @@ const ActiveThumbnailWindow = (props) => {
     console.log(props)
 
     return (
-        <div class = "activeThumbnail">
+        <div>
             <img class="active" style={{width:"1"}} src = {props.activeImage} />
 
             text

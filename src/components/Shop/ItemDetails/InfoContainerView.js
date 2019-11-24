@@ -1,7 +1,16 @@
 import React, {Component}  from 'react'
+import ItemTitle from './ItemTitle'
+import ItemDescription from './ItemTitle'
+
 import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
+
+
+const InfoContainerWrapper = styled.div `
+    display:flex;
+    flex-direction: column;
+`
 
 class InfoContainerView extends Component {
 
@@ -12,29 +21,35 @@ class InfoContainerView extends Component {
     render() {
 
         var foundClothingItem = this.props.productDetails;
+        console.log(foundClothingItem);
+        var title = "";
+        var price = 0.00;
+        var desc = "";
 
         if (foundClothingItem) {
+
+            title = foundClothingItem.title;
+            price = foundClothingItem.price;
+            desc = foundClothingItem.desc;
+
             foundClothingItem = (
             <div> 
                 <h2> {foundClothingItem.title} </h2> 
-                <h2> {foundClothingItem.desc} </h2> 
-
+                <h2> {foundClothingItem.desc} </h2>
             </div>
             ) 
 
         } else {
-            foundClothingItem = (
-                <div> 
-                    <h2> not found </h2> 
-                </div>
-            ) 
+            foundClothingItem = (<div><h2> not found </h2></div>) 
         }
 
         return (
-            <div>
-                {/* Info Container View */}
-                {foundClothingItem}
-            </div>
+            <InfoContainerWrapper>
+                <ItemTitle title={title}/>
+                <ItemDescription desc={desc}/>
+                <div>columned under</div>
+
+            </InfoContainerWrapper>
         )
     }
 }
