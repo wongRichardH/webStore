@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 import ThumbnailGallery from './ThumbnailGallery';
+import InfoContainerView from './InfoContainerView';
 
 
 // export const styledActiveComponent = styled.div `
@@ -52,21 +53,14 @@ class ItemDetails extends Component {
 
 
                 <div class = "rightProductInfoContainer">
-                    {foundClothingItem}
+                    {/* {foundClothingItem} */}
+
+                    <InfoContainerView productDetails={this.props.foundItem}/>
                 </div>
                 
 
                 {/* {this.props.match.params.itemID} */}
             </div>
-            
-
-            // <div class="topContainer">
-            //     <div class="column"> dsads </div>
-            //     <div class="column"> dsads </div>
-            // </div>
-
-
-
         )
     }
 }

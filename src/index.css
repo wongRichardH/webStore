@@ -29,7 +29,8 @@ li a {
   background-color: blue;
   width: 100%;
   height: 300px;
-  /* display: inline-block; */
+  display: flex;
+  flex-direction: row;
 }
 
 /*LEFT CONTAINER*/
@@ -54,12 +55,4 @@ li a {
   background-color: red;
 
   float:right;
-}
-
-.column {
-  background-color: red;
-  width: 50%;
-  height: 100px;
-  margin-top: 1px;
-  float:left;
 }
