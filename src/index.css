@@ -28,9 +28,25 @@ li a {
 .activeThumbnailWindow {
   max-width: 50%;
   background-color:green;
+
+  float:left;
 }
 
 .activeThumbnail {
-  max-width: 100%;
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+  width: 50%;
 }
 
+.topContainer {
+  background-color: blue;
+  /* width: 100%; */
+  display: inline-block;
+}
+
+.productInfo {
+  width: 50%;
+  background-color: red;
+
+  float:right;
+}

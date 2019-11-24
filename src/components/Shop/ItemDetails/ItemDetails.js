@@ -41,20 +41,25 @@ class ItemDetails extends Component {
         }
 
         return (
-            <div>
-                <div>{foundClothingItem}</div>
+            <div class= "topContainer">
+                {/* <div>{foundClothingItem}</div> */}
                 
-                {/* <styledActiveComponent>
-                    <span><ThumbnailGallery productDetails={this.props.foundItem}/></span>
-                    <span> side by side </span>
-                </styledActiveComponent> */}
 
                 <div class="activeThumbnailWindow">
-                    <span><ThumbnailGallery productDetails={this.props.foundItem}/></span>
-                    <span> side by side </span>
+                    <div>
+                        {/* <span><ThumbnailGallery productDetails={this.props.foundItem}/></span> */}
+                        <ThumbnailGallery productDetails={this.props.foundItem}/>
+
+                    </div>
                 </div>
 
-                {this.props.match.params.itemID}
+
+                <div class = "productInfo">
+                    {foundClothingItem}
+                </div>
+                
+
+                {/* {this.props.match.params.itemID} */}
             </div>
         )
     }
