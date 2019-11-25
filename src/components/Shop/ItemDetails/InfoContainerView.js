@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 
+import CustomDropdownButton from '../../../elements/DropdownButton';
 
 const InfoContainerWrapper = styled.div `
     display:flex;
@@ -47,7 +48,9 @@ class InfoContainerView extends Component {
             <InfoContainerWrapper>
                 <ItemTitle title={title}/>
                 <ItemDescription desc={desc}/>
-                <div>columned under</div>
+                
+
+                <CustomDropdownButton/>
 
             </InfoContainerWrapper>
         )
