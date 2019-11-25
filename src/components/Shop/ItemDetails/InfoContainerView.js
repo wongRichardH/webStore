@@ -1,6 +1,7 @@
 import React, {Component}  from 'react'
 import ItemTitle from './ItemTitle'
-import ItemDescription from './ItemTitle'
+import ItemDescription from './ItemDescription'
+import ItemPrice from './ItemPrice'
 
 import { connect } from 'react-redux';
 import '../../../index';
@@ -48,7 +49,8 @@ class InfoContainerView extends Component {
             <InfoContainerWrapper>
                 <ItemTitle title={title}/>
                 <ItemDescription desc={desc}/>
-                
+                <ItemPrice price={price}/>
+
 
                 <CustomDropdownButton/>
 

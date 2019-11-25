@@ -7,6 +7,7 @@ const Title = styled.h1`
     /* margin-bottom: 1.125em; */
     text-transform: uppercase;
     font-weight: 400;
+    float: left;
 `;
 
 const ItemTitle = (props) => {
@@ -17,7 +18,10 @@ const ItemTitle = (props) => {
         // <Title>{props.title}</Title>
 
         <div>
-            <Title> {props.title} </Title>
+            <div>
+                <Title> {props.title} </Title>
+
+            </div>
         </div>
 
         // <div> Active Thumbnail Window </div>
