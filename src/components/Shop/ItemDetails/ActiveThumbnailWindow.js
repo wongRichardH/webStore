@@ -24,8 +24,6 @@ const ActiveThumbnailWindow = (props) => {
     return (
         <div>
             <img class="active" style={{width:"1"}} src = {props.activeImage} />
-
-            text
         </div>
 
         // <div> Active Thumbnail Window </div>
