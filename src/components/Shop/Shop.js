@@ -15,7 +15,7 @@ class Shop extends Component {
                 name={eachItem.title} 
                 desc={eachItem.desc} 
                 price={eachItem.price} 
-                img={eachItem.img}/>
+                img={eachItem.img[0]}/>
             ) 
         })
 
