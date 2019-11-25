@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 import ThumbnailGallery from './ThumbnailGallery';
+import ThumbnailGrid from './ThumbnailGrid';
 import InfoContainerView from './InfoContainerView';
-
 
 
 const TopContainerFormat = styled.div `
@@ -20,6 +20,8 @@ const GalleryComponentFormat = styled.div `
     width: 50%;
     background-color: yellow;
     text-align: center;
+    display:flex;
+    flex-direction:column;
 `;
 
 const InfoContainerFormat = styled.div `
@@ -61,6 +63,7 @@ class ItemDetails extends Component {
                 {/* PHOTO GALLERY */}
                 <GalleryComponentFormat>
                     <ThumbnailGallery productDetails={this.props.foundItem}/>
+                    <ThumbnailGrid productImages={this.props.foundItem.img}/>
                 </GalleryComponentFormat>
 
                 {/* PRDOCUT INFORMATION */}
