@@ -14,6 +14,8 @@ const StyledButton = styled.button`
         color: black;
     }
 
+    float:left;
+
 `
 
 const CustomAddToCartButton = (props) => {

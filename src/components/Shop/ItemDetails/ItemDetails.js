@@ -7,12 +7,26 @@ import ThumbnailGallery from './ThumbnailGallery';
 import InfoContainerView from './InfoContainerView';
 
 
+
+const TopContainerFormat = styled.div `
+    background-color: lightpink;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+`;
+
 const GalleryComponentFormat = styled.div `
     width: 50%;
     background-color: yellow;
     text-align: center;
 `;
 
+const InfoContainerFormat = styled.div `
+    width: 50%;
+    background-color: yellow;
+    text-align: center;
+`;
 
 class ItemDetails extends Component {
 
@@ -42,22 +56,21 @@ class ItemDetails extends Component {
         }
 
         return (
-            <div class= "topContainer">
+            <TopContainerFormat>
                 
+                {/* PHOTO GALLERY */}
                 <GalleryComponentFormat>
-                    {/* <div> */}
-                        <ThumbnailGallery productDetails={this.props.foundItem}/>
-                    {/* </div> */}
+                    <ThumbnailGallery productDetails={this.props.foundItem}/>
                 </GalleryComponentFormat>
 
-
-                <div>
+                {/* PRDOCUT INFORMATION */}
+                <InfoContainerFormat>
                     <InfoContainerView productDetails={this.props.foundItem}/>
-                </div>
+                </InfoContainerFormat>
                 
 
                 {/* {this.props.match.params.itemID} */}
-            </div>
+            </TopContainerFormat>
         )
     }
 }

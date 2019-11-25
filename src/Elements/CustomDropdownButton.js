@@ -14,7 +14,7 @@ const CustomDropdownButton = (props) => {
 
     return (
         <div>
-            <select style={{width: 100, height: 40}}>
+            <select style={{width: 100, height: 40, float:"left"}}>
                 <option>SMALL</option>
                 <option>MEDIUM</option>
                 <option>LARGE</option>

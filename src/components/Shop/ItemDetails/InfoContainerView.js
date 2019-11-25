@@ -14,6 +14,8 @@ const InfoContainerWrapper = styled.div `
     display:flex;
     flex-direction: column;
     word-wrap: break-word;
+
+    /* float:left; */
 `
 
 class InfoContainerView extends Component {
