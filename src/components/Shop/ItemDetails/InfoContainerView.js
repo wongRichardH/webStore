@@ -7,11 +7,12 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 
-import CustomDropdownButton from '../../../elements/DropdownButton';
+import CustomDropdownButton from '../../../Elements/CustomDropdownButton';
 
 const InfoContainerWrapper = styled.div `
     display:flex;
     flex-direction: column;
+    word-wrap: break-word;
 `
 
 class InfoContainerView extends Component {
