@@ -7,11 +7,11 @@ import ThumbnailGallery from './ThumbnailGallery';
 import InfoContainerView from './InfoContainerView';
 
 
-// export const styledActiveComponent = styled.div `
-//     max-width: 50%;
-//     background-color: blue;
-//     display:inline-block;
-// `;
+const GalleryComponentFormat = styled.div `
+    width: 50%;
+    background-color: yellow;
+    text-align: center;
+`;
 
 
 class ItemDetails extends Component {
@@ -44,17 +44,14 @@ class ItemDetails extends Component {
         return (
             <div class= "topContainer">
                 
-                <div class="leftGalleryContainer">
-                    <div>
+                <GalleryComponentFormat>
+                    {/* <div> */}
                         <ThumbnailGallery productDetails={this.props.foundItem}/>
+                    {/* </div> */}
+                </GalleryComponentFormat>
 
-                    </div>
-                </div>
 
-
-                <div class = "rightProductInfoContainer">
-                    {/* {foundClothingItem} */}
-
+                <div>
                     <InfoContainerView productDetails={this.props.foundItem}/>
                 </div>
                 

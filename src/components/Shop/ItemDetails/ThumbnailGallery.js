@@ -4,9 +4,10 @@ import ActiveThumbnailWindow from './ActiveThumbnailWindow'
 import styled from 'styled-components';
 import '../../../index';
 
-// const StyledCard = styled(Card)`
-//     text-align: center;
-// `;
+const StyledActiveThumbnailWindow = styled(ActiveThumbnailWindow)`
+    /* text-align: center; */
+    max-width: 100%;
+`;
 
 class ThumbnailGallery extends Component {
     constructor(props) {
@@ -21,7 +22,10 @@ class ThumbnailGallery extends Component {
     render() {
         return (
             
-            <ActiveThumbnailWindow class="gallery" activeImage= {this.props.productDetails.img}/>
+            // <ActiveThumbnailWindow class="gallery" activeImage= {this.props.productDetails.img}/>
+
+            <StyledActiveThumbnailWindow activeImage= {this.props.productDetails.img}/>
+
             //insert grid below this
         )
     }
