@@ -8,6 +8,7 @@ import '../../../index';
 import styled from 'styled-components';
 
 import CustomDropdownButton from '../../../Elements/CustomDropdownButton';
+import CustomAddToCartButton from '../../../Elements/CustomAddToCartButton';
 
 const InfoContainerWrapper = styled.div `
     display:flex;
@@ -54,6 +55,7 @@ class InfoContainerView extends Component {
 
 
                 <CustomDropdownButton/>
+                <CustomAddToCartButton canAddToCart={true}/>
 
             </InfoContainerWrapper>
         )
