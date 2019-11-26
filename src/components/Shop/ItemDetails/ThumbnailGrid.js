@@ -6,7 +6,7 @@ const GridImage = styled.img`
 
   display: block;
   max-width:100px;
-  max-height:50px;
+  max-height:60px;
   width: auto;
   height: auto;
 `
