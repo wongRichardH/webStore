@@ -3,14 +3,12 @@ import styled from 'styled-components';
 
 
 const GridImage = styled.img`
-    /* max-width: 25%; */
 
-    /* width: 100px; */
-
-    max-width:100px;
-    max-height:100px;
-    width:auto;
-    height:auto;
+  display: block;
+  max-width:100px;
+  max-height:50px;
+  width: auto;
+  height: auto;
 `
 
 const StyledGrid = styled.div`
