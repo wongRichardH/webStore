@@ -1,5 +1,6 @@
 import React, {Component}  from 'react'
 import ActiveThumbnailWindow from './ActiveThumbnailWindow'
+import ThumbnailGrid from './ThumbnailGrid';
 
 import styled from 'styled-components';
 import '../../../index';
@@ -21,10 +22,10 @@ class ThumbnailGallery extends Component {
 
     render() {
         return (
-            
-            <StyledActiveThumbnailWindow activeImage= {this.props.productDetails.img[0]}/>
-
-            //insert grid below this
+            <div>
+                <StyledActiveThumbnailWindow activeImage = {this.props.productDetails.img[0]}/>
+                <ThumbnailGrid productImages = {this.props.productDetails.img}/>
+            </div>
         )
     }
 }

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 import ThumbnailGallery from './ThumbnailGallery';
-import ThumbnailGrid from './ThumbnailGrid';
+// import ThumbnailGrid from './ThumbnailGrid';
 import InfoContainerView from './InfoContainerView';
 
 
@@ -63,16 +63,13 @@ class ItemDetails extends Component {
                 {/* PHOTO GALLERY */}
                 <GalleryComponentFormat>
                     <ThumbnailGallery productDetails={this.props.foundItem}/>
-                    <ThumbnailGrid productImages={this.props.foundItem.img}/>
                 </GalleryComponentFormat>
 
                 {/* PRDOCUT INFORMATION */}
                 <InfoContainerFormat>
                     <InfoContainerView productDetails={this.props.foundItem}/>
                 </InfoContainerFormat>
-                
 
-                {/* {this.props.match.params.itemID} */}
             </TopContainerFormat>
         )
     }
