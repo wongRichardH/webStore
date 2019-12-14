@@ -6,7 +6,7 @@ const Title = styled.h1`
     font-size: 1.625em;
     /* margin-bottom: 1.125em; */
     text-transform: uppercase;
-    font-weight: 400;
+    /* font-weight: 400; */
     float: left;
 `;
 
@@ -15,16 +15,13 @@ const ItemTitle = (props) => {
     console.log(props)
 
     return (
-        // <Title>{props.title}</Title>
 
         <div>
             <div>
                 <Title> {props.title} </Title>
-
             </div>
         </div>
 
-        // <div> Active Thumbnail Window </div>
     )
 }
 
