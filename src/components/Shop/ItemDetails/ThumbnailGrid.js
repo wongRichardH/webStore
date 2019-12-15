@@ -1,6 +1,7 @@
 import React  from 'react'
 import styled from 'styled-components';
 
+import {setActiveImage} from '../../../actions/imageActions'
 
 const GridImage = styled.img`
 
@@ -38,3 +39,9 @@ const ThumbnailGrid = (props) => {
 }
 
 export default ThumbnailGrid;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
