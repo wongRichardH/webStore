@@ -13,6 +13,14 @@ const GridImage = styled.img`
   height: auto;
 
   cursor: pointer;
+
+  :hover {
+    cursor: pointer;
+    
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+  }
 `
 
 const StyledGrid = styled.div`
