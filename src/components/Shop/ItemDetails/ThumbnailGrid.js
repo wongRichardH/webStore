@@ -39,16 +39,20 @@ const ThumbnailGrid = (props) => {
 
     console.log(props)
 
-    // const localSetAction = (id) => {(
+    function testFunc() {
+        console.log("Button Clicked")
+        console.log(props)
 
-    // )}
+        props.setActiveImageFUNCTION(9999)
+
+    }
 
 
     let productImages = props.productImages.map( (eachItem, index) => {
         return (
             <StyledGrid>
                 <GridImage 
-                onClick={props.setActiveImageFUNCTION(index)} 
+                onClick={testFunc} 
                 // onClick={console.log(16159)} 
                 src={eachItem} 
                 alt="noImage"
@@ -66,11 +70,6 @@ const ThumbnailGrid = (props) => {
 // const 
 
 const mapDispatchToProps = (dispatch) => {
-    // setActiveImage(id) {
-    //     return () => {
-    //         dispatch(SET_ACTIVE_IMAGE_ACTION(id));
-    //     }
-    // }
 
     return {
         setActiveImageFUNCTION: (id) => {
