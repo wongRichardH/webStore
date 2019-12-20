@@ -1,3 +1,8 @@
+import {
+    SET_ACTIVE_IMAGE, 
+    setActiveImage
+} from '../../actions/imageActions'
+
 import Item0 from '../../assets/Item0.png';
 import Item1 from '../../assets/Item1.png';
 import Item2 from '../../assets/Item2.png';
@@ -54,12 +59,24 @@ const initState = {
             price:90.00,
             img: [Item5]}
     ],
-    addedItems:[],
+    activeImageIDX: 0,
+    addedItems: [],
     total: 0
 
 }
 
-const cartReducer= (state = initState, action)=>{
+const cartReducer = (state = initState, action) => {
+
+    console.log(action.type)
+
+    switch (action.type) {
+        case 'SET_ACTIVE_IMAGE':
+            // console.log("SETTING ACTIVE IMAGE CONSOLE LOGGG")
+            console.log(action.id)
+            return action.id
+    }
+
+
     return state;
 }
 export default cartReducer;

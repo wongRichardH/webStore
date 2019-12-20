@@ -1,7 +1,8 @@
 import React  from 'react'
 import styled from 'styled-components';
+import {connect} from 'react-redux';
 
-import {setActiveImage} from '../../../actions/imageActions'
+import {SET_ACTIVE_IMAGE_ACTION} from '../../../actions/imageActions';
 
 const GridImage = styled.img`
 
@@ -10,6 +11,8 @@ const GridImage = styled.img`
   max-height:60px;
   width: auto;
   height: auto;
+
+  cursor: pointer;
 `
 
 const StyledGrid = styled.div`
@@ -21,14 +24,28 @@ const StyledGrid = styled.div`
     margin: 3px;
 `
 
+
+
+
 const ThumbnailGrid = (props) => {
 
     console.log(props)
 
-    let productImages = props.productImages.map(eachItem => {
+    // const localSetAction = (id) => {(
+
+    // )}
+
+
+    let productImages = props.productImages.map( (eachItem, index) => {
         return (
             <StyledGrid>
-                <GridImage src={eachItem} alt="noImage"/>
+                <GridImage 
+                onClick={props.setActiveImageFUNCTION(index)} 
+                // onClick={console.log(16159)} 
+                src={eachItem} 
+                alt="noImage"
+                key={index}
+                />
             </StyledGrid>
         )
     })
@@ -38,10 +55,21 @@ const ThumbnailGrid = (props) => {
     )
 }
 
-export default ThumbnailGrid;
+// const 
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+    // setActiveImage(id) {
+    //     return () => {
+    //         dispatch(SET_ACTIVE_IMAGE_ACTION(id));
+    //     }
+    // }
 
+    return {
+        setActiveImageFUNCTION: (id) => {
+            // console.log(id)
+            dispatch(SET_ACTIVE_IMAGE_ACTION(id))
+        }
     }
 }
+
+export default connect(null, mapDispatchToProps)(ThumbnailGrid);

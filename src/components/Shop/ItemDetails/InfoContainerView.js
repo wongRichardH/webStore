@@ -65,18 +65,4 @@ class InfoContainerView extends Component {
     }
 }
 
-// const mapStateToProps = (state, ownProps) => {
-
-//     let id = Number(ownProps.match.params.itemID);
-//     console.log(id)
-
-//     return {
-//         //Search through our cartReducer. if an id is found from that matches our params, store that in the vaariable "items"
-//         foundItem: state.items.find(item => item.id === id)
-//     }
-// }
-
-// export default connect(mapStateToProps)(InfoContainerView);
-
-
 export default InfoContainerView;

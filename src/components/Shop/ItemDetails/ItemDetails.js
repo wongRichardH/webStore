@@ -65,7 +65,7 @@ class ItemDetails extends Component {
                     <ThumbnailGallery productDetails={this.props.foundItem}/>
                 </GalleryComponentFormat>
 
-                {/* PRDOCUT INFORMATION */}
+                {/* PRODUCT INFORMATION */}
                 <InfoContainerFormat>
                     <InfoContainerView productDetails={this.props.foundItem}/>
                 </InfoContainerFormat>
