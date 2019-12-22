@@ -20,11 +20,19 @@ class ThumbnailGallery extends Component {
         // console.log(this.props.desc)
     }
 
+    handleClick = (e) => {
+        console.log(e.target.getAttribute('data-index'))
+    }
+
     render() {
         return (
             <div>
                 <StyledActiveThumbnailWindow activeImage = {this.props.productDetails.img[0]}/>
-                <ThumbnailGrid productImages = {this.props.productDetails.img}/>
+                
+                <ThumbnailGrid 
+                productImages = {this.props.productDetails.img}
+                handleClick = {this.handleClick}
+                />
             </div>
         )
     }

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {SET_ACTIVE_IMAGE_ACTION} from '../../../actions/imageActions';
 
-const GridImage = styled.img`
+const Thumbnail = styled.img`
 
   display: block;
   max-width:100px;
@@ -34,24 +34,27 @@ const StyledGrid = styled.div`
 
 const ThumbnailGrid = (props) => {
 
+    console.log("initial load")
     console.log(props)
 
     function testFunc() {
         console.log("Button Clicked")
         console.log(props)
 
-        props.setActiveImageFUNCTION(9999)
-
+        // props.setActiveImageFUNCTION(9999)
+        // props.setActiveImageFUNCTION(1)
+        // props.dispatch.setActiveImageFUNCTION(id)
     }
 
     let productImages = props.productImages.map( (eachItem, index) => {
         return (
-            <StyledGrid>
-                <GridImage 
-                onClick={testFunc} 
+            <StyledGrid key={index}>
+                <Thumbnail
+                onClick={props.handleClick} 
                 src={eachItem} 
                 alt="noImage"
                 key={index}
+                data-index={index}
                 />
             </StyledGrid>
         )
@@ -62,11 +65,9 @@ const ThumbnailGrid = (props) => {
     )
 }
 
-// const 
-
 const mapDispatchToProps = (dispatch) => {
     return {
-        setActiveImageFUNCTION: (id) => { dispatch(SET_ACTIVE_IMAGE_ACTION(16159)) }
+        setActiveImageFUNCTION: (id) => { dispatch(SET_ACTIVE_IMAGE_ACTION(id)) }
     }
 }
 
