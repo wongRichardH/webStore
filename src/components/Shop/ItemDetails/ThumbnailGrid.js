@@ -49,7 +49,6 @@ const ThumbnailGrid = (props) => {
             <StyledGrid>
                 <GridImage 
                 onClick={testFunc} 
-                // onClick={console.log(16159)} 
                 src={eachItem} 
                 alt="noImage"
                 key={index}
@@ -66,12 +65,8 @@ const ThumbnailGrid = (props) => {
 // const 
 
 const mapDispatchToProps = (dispatch) => {
-
     return {
-        setActiveImageFUNCTION: (id) => {
-            // console.log(id)
-            dispatch(SET_ACTIVE_IMAGE_ACTION(id))
-        }
+        setActiveImageFUNCTION: (id) => { dispatch(SET_ACTIVE_IMAGE_ACTION(16159)) }
     }
 }
 

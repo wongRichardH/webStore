@@ -1,6 +1,6 @@
 export const SET_ACTIVE_IMAGE_ACTION = (id) => {
 
-    console.log("REACHED HERE")
+    console.log("ACTION WAS FIRED")
 
     return {
         type: 'SET_ACTIVE_IMAGE',
