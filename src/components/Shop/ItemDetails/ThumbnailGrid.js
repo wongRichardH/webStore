@@ -32,9 +32,6 @@ const StyledGrid = styled.div`
     margin: 3px;
 `
 
-
-
-
 const ThumbnailGrid = (props) => {
 
     console.log(props)
@@ -46,7 +43,6 @@ const ThumbnailGrid = (props) => {
         props.setActiveImageFUNCTION(9999)
 
     }
-
 
     let productImages = props.productImages.map( (eachItem, index) => {
         return (
