@@ -13,6 +13,10 @@ const StyledActiveThumbnailWindow = styled(ActiveThumbnailWindow)`
 class ThumbnailGallery extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            activeIndex: 0
+        }
     }
 
     componentDidMount() {
@@ -22,12 +26,17 @@ class ThumbnailGallery extends Component {
 
     handleClick = (e) => {
         console.log(e.target.getAttribute('data-index'))
+
+        // this.state.activeIndex = e.target.getAttribute('data-index')
+
+        const newActiveIndex = e.target.getAttribute('data-index')
+        this.setState({activeIndex: newActiveIndex})
     }
 
     render() {
         return (
             <div>
-                <StyledActiveThumbnailWindow activeImage = {this.props.productDetails.img[0]}/>
+                <StyledActiveThumbnailWindow activeImage = {this.props.productDetails.img[this.state.activeIndex]}/>
                 
                 <ThumbnailGrid 
                 productImages = {this.props.productDetails.img}
