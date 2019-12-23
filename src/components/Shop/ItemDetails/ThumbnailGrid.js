@@ -1,8 +1,5 @@
 import React  from 'react'
 import styled from 'styled-components';
-import {connect} from 'react-redux';
-
-import {SET_ACTIVE_IMAGE_ACTION} from '../../../actions/imageActions';
 
 const Thumbnail = styled.img`
 
@@ -27,7 +24,7 @@ const StyledGrid = styled.div`
     display:flex;
     flex-wrap: wrap; 
     justify-content: center;
-    background-color: red;
+    // background-color: red;
 
     margin: 3px;
 `
@@ -40,10 +37,6 @@ const ThumbnailGrid = (props) => {
     function testFunc() {
         console.log("Button Clicked")
         console.log(props)
-
-        // props.setActiveImageFUNCTION(9999)
-        // props.setActiveImageFUNCTION(1)
-        // props.dispatch.setActiveImageFUNCTION(id)
     }
 
     let productImages = props.productImages.map( (eachItem, index) => {
@@ -65,10 +58,4 @@ const ThumbnailGrid = (props) => {
     )
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setActiveImageFUNCTION: (id) => { dispatch(SET_ACTIVE_IMAGE_ACTION(id)) }
-    }
-}
-
-export default connect(null, mapDispatchToProps)(ThumbnailGrid);
+export default ThumbnailGrid;
