@@ -27,8 +27,6 @@ class ThumbnailGallery extends Component {
     handleClick = (e) => {
         console.log(e.target.getAttribute('data-index'))
 
-        // this.state.activeIndex = e.target.getAttribute('data-index')
-
         const newActiveIndex = e.target.getAttribute('data-index')
         this.setState({activeIndex: newActiveIndex})
     }

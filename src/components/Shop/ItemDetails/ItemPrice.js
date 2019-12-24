@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const PriceWrapper = styled.div`
     float:left;
+    font-size: 1.25em;
 
 `;
 

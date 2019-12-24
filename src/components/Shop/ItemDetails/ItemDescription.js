@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const DescriptionWrapper = styled.div`
     float:left;
-
+    font-size: 1.125em;
+    display: block;
 `;
 
 const ItemDescription = (props) => {
