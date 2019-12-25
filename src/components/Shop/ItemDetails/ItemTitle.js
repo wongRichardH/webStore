@@ -3,17 +3,15 @@ import styled from 'styled-components';
 
 const Title = styled.h1`
     text-align: left;
-
-    font-style: normal;
-    font-family: helvetica-neue-regular;
-    font-size: 2.57143em;
-    font-weight: 700;
-
     display: block;
 
-    line-height: 1.2;
-
+    font-family: helvetica-neue-regular;
+    font-style: normal;
+    font-weight: 700;
     letter-spacing: 1px;
+    font-size:36px;
+    line-height:43.2px;
+    box-sizing:border-box;
 `;
 
 const ItemTitle = (props) => {
