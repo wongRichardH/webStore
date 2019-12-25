@@ -25,7 +25,8 @@ const InfoContainerFormat = styled.div `
     width: ${(props) => props.isOnMobileDevice == true ? "100%" : "50%"};
 
     text-align: center;
-    margin: 15px;
+    // margin: 15px;
+    padding: 15px;
 `;
 
 class ItemDetails extends Component {
