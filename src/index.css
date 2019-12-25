@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'liberation-sans-regular';
+  src: url(fonts/LiberationSans-Regular.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'liberation-sans-bold';
+  src: url(fonts/LiberationSans-Bold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-neue-regular';
+  src: url(fonts/HelveticaNeueMed.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-neue-light';
+  src: url(fonts/HelveticaNeueLt.ttf);
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

@@ -2,13 +2,19 @@ import React  from 'react'
 import styled from 'styled-components';
 
 const Title = styled.h1`
-    // letter-spacing: 0.125em;
-    // font-size: 1.625em;
-    /* margin-bottom: 1.125em; */
-    text-transform: uppercase;
-    font-weight: 700;
+
     float: left;
+
     font-style: normal;
+    font-family: helvetica-neue-regular;
+    font-size: 2.57143em;
+    font-weight: 700;
+
+    display: block;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
 `;
 
 const ItemTitle = (props) => {

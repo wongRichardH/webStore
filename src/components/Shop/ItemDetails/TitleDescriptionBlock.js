@@ -1,18 +1,32 @@
 import React  from 'react'
 import styled from 'styled-components';
 
-const Title = styled.h1`
+const Title = styled.h3`
     float: left;
-
+    font-family: helvetica-neue-regular;
+    text-decoration: underline;
+    // font-size: 1.78571em;
+    font-size: 24.9999px;
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-weight: 700;
 `;
 
 const Description = styled.div`
-    // letter-spacing: 0.125em;
-    font-size: 1.125em;
-    float: left;
-    font-weight: 400;
-    line-height: 1.6;
-    font-kerning: normal;
+    float:left;
+
+    display:block;
+
+    font-size: 14px;
+    line-height: 23.8px;
+    // font-family: helvetica-neue-regular;
+    font-family: helvetica-neue-light;
+    font-weight: 100;
+    font-style: normal;
+
+    
+    // color: #000;
+    -webkit-font-smoothing: antialiased;
 `;
 
 const TitleDescriptionBlock = (props) => {
