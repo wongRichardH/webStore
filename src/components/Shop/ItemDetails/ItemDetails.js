@@ -4,9 +4,14 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 import ThumbnailGallery from './ThumbnailGallery';
-// import ThumbnailGrid from './ThumbnailGrid';
 import InfoContainerView from './InfoContainerView';
 
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
 
 const TopContainerFormat = styled.div `
     // background-color: lightpink;
@@ -26,9 +31,13 @@ const GalleryComponentFormat = styled.div `
 
 const InfoContainerFormat = styled.div `
     width: 50%;
-    // background-color: yellow;
     text-align: center;
     margin: 15px;
+
+    // background-color: yellow;
+
+    background-color: ${(props) => props.isOnMobileDevice ? "black" : "green"};
+
 `;
 
 class ItemDetails extends Component {
@@ -58,6 +67,12 @@ class ItemDetails extends Component {
             ) 
         }
 
+        var isOnMobileDevice = false;
+
+        if (isMobile) {
+            isOnMobileDevice = true;
+        }
+
         return (
             <TopContainerFormat>
                 
@@ -67,7 +82,7 @@ class ItemDetails extends Component {
                 </GalleryComponentFormat>
 
                 {/* PRODUCT INFORMATION */}
-                <InfoContainerFormat>
+                <InfoContainerFormat isOnMobileDevice = {isOnMobileDevice}>
                     <InfoContainerView productDetails={this.props.foundItem}/>
                 </InfoContainerFormat>
 
