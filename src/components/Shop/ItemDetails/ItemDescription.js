@@ -3,24 +3,27 @@ import styled from 'styled-components';
 
 const DescriptionWrapper = styled.div`
     text-align: left;
-    font-size: 1.125em;
-    display: block;
+
+    display:block;
+
+    font-size: 16px;
+    line-height: 23.8px;
+    font-family: helvetica-neue-light;
+    font-weight: 100;
+    font-style: normal;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
 `;
 
 const ItemDescription = (props) => {
-
-    console.log(55)
-
     return (
-
         <div>
             <DescriptionWrapper>
                 {props.desc}
 
             </DescriptionWrapper>
         </div>
-
-        // <div> Active Thumbnail Window </div>
     )
 }
 

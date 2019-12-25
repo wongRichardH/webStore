@@ -19,6 +19,9 @@ const StyledButton = styled.button`
 
     float:left;
 
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+
 `
 
 const CustomAddToCartButton = (props) => {

@@ -24,7 +24,7 @@ const initState = {
     items: [
         {id:1,
             title:'Winter Body', 
-            desc: "Winter Body Description", 
+            desc: "Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description", 
             price:110.0, 
             img: [ytg1, ytg2, ytg3, ytg4, ytg5, ytg6]
         },
