@@ -2,7 +2,7 @@ import React  from 'react'
 import styled from 'styled-components';
 
 const DescriptionWrapper = styled.div`
-    float:left;
+    text-align: left;
     font-size: 1.125em;
     display: block;
 `;

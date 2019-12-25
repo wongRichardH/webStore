@@ -1,8 +1,16 @@
 import React  from 'react'
 import styled from 'styled-components';
 
+const TitleDescriptionWrapper = styled.div`
+    margin-top: 10px;
+    margin-bottom: 10px;
+`;
+
 const Title = styled.h3`
-    float: left;
+    text-align: left;
+
+    display:block;
+
     font-family: helvetica-neue-regular;
     text-decoration: underline;
     // font-size: 1.78571em;
@@ -13,18 +21,16 @@ const Title = styled.h3`
 `;
 
 const Description = styled.div`
-    float:left;
+    text-align: left;
 
     display:block;
 
     font-size: 14px;
     line-height: 23.8px;
-    // font-family: helvetica-neue-regular;
     font-family: helvetica-neue-light;
     font-weight: 100;
     font-style: normal;
 
-    
     // color: #000;
     -webkit-font-smoothing: antialiased;
 `;
@@ -32,7 +38,7 @@ const Description = styled.div`
 const TitleDescriptionBlock = (props) => {
 
     return (
-        <div>
+        <TitleDescriptionWrapper>
             <div>
                 <Title>
                     Composition
@@ -45,7 +51,7 @@ const TitleDescriptionBlock = (props) => {
                 </Description>
             </div>
         
-        </div>
+        </TitleDescriptionWrapper>
     )
 }
 

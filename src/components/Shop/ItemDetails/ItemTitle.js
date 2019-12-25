@@ -2,8 +2,7 @@ import React  from 'react'
 import styled from 'styled-components';
 
 const Title = styled.h1`
-
-    float: left;
+    text-align: left;
 
     font-style: normal;
     font-family: helvetica-neue-regular;
