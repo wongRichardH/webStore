@@ -6,47 +6,39 @@ import styled from 'styled-components';
 import ThumbnailGallery from './ThumbnailGallery';
 import InfoContainerView from './InfoContainerView';
 
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-  } from "react-device-detect";
-
 const TopContainerFormat = styled.div `
-    // background-color: lightpink;
     width: 100%;
     height: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: ${(props) => props.isOnMobileDevice == true ? "column" : "row"};
 `;
 
 const GalleryComponentFormat = styled.div `
-    width: 50%;
-    // background-color: yellow;
+    width: ${(props) => props.isOnMobileDevice == true ? "100%" : "50%"};
+
     text-align: center;
     display:flex;
     flex-direction:column;
 `;
 
 const InfoContainerFormat = styled.div `
-    width: 50%;
+    width: ${(props) => props.isOnMobileDevice == true ? "100%" : "50%"};
+
     text-align: center;
     margin: 15px;
-
-    // background-color: yellow;
-
-    background-color: ${(props) => props.isOnMobileDevice ? "black" : "green"};
-
 `;
 
 class ItemDetails extends Component {
 
     componentDidMount() {
+        console.log("COMPONENT JUST MOUNTED")
         console.log(this.props)
     }
 
     render() {
+
+        console.log("COMPONENT ABOUT TO RENDER")
+        console.log(this.props)
 
         var foundClothingItem = this.props.foundItem;
 
@@ -62,27 +54,21 @@ class ItemDetails extends Component {
         } else {
             foundClothingItem = (
                 <div> 
-                    <h2> not found </h2> 
+                    <h2> Error: Item Not Found </h2> 
                 </div>
             ) 
         }
 
-        var isOnMobileDevice = false;
-
-        if (isMobile) {
-            isOnMobileDevice = true;
-        }
-
         return (
-            <TopContainerFormat>
+            <TopContainerFormat isOnMobileDevice = {this.props.isOnMobileDevice}>
                 
                 {/* PHOTO GALLERY */}
-                <GalleryComponentFormat>
+                <GalleryComponentFormat isOnMobileDevice = {this.props.isOnMobileDevice}>
                     <ThumbnailGallery productDetails={this.props.foundItem}/>
                 </GalleryComponentFormat>
 
                 {/* PRODUCT INFORMATION */}
-                <InfoContainerFormat isOnMobileDevice = {isOnMobileDevice}>
+                <InfoContainerFormat isOnMobileDevice = {this.props.isOnMobileDevice}>
                     <InfoContainerView productDetails={this.props.foundItem}/>
                 </InfoContainerFormat>
 
@@ -97,10 +83,11 @@ const mapStateToProps = (state, ownProps) => {
     console.log(id)
 
     return {
-
         //Search through our cartReducer. if an id is found from that matches our params, store that in the vaariable "items"
+        foundItem: state.items.find(item => item.id === id),
 
-        foundItem: state.items.find(item => item.id === id)
+        //Check for Mobile
+        isOnMobileDevice: state.isOnMobileDevice == true ? true : false
     }
 }
 

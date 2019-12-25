@@ -15,7 +15,7 @@ const CustomDropdownButton = (props) => {
 
     return (
         <div>
-            <select class="customDropDownMenu">
+            <select className="customDropDownMenu">
                 <option>SELECT A SIZE</option>
                 <option>SMALL</option>
                 <option>MEDIUM</option>

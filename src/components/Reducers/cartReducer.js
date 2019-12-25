@@ -3,6 +3,10 @@ import {
     setActiveImage
 } from '../../actions/imageActions'
 
+import {
+    isMobile
+  } from "react-device-detect";
+
 import Item0 from '../../assets/Item0.png';
 import Item1 from '../../assets/Item1.png';
 import Item2 from '../../assets/Item2.png';
@@ -10,15 +14,12 @@ import Item3 from '../../assets/Item3.png';
 import Item4 from '../../assets/Item4.png';
 import Item5 from '../../assets/Item5.png';
 
-
-
 import ytg1 from '../../assets/ytg1.jpg';
 import ytg2 from '../../assets/ytg2.jpg';
 import ytg3 from '../../assets/ytg3.jpeg';
 import ytg4 from '../../assets/ytg4.jpeg';
 import ytg5 from '../../assets/ytg5.jpg';
 import ytg6 from '../../assets/ytg6.jpg';
-
 
 const initState = {
     items: [
@@ -59,10 +60,9 @@ const initState = {
             price:90.00,
             img: [Item5]}
     ],
-    activeImageIDX: 0,
     addedItems: [],
-    total: 0
-
+    total: 0,
+    isOnMobileDevice: (isMobile) == true ? true : false
 }
 
 const cartReducer = (state = initState, action) => {
@@ -71,7 +71,6 @@ const cartReducer = (state = initState, action) => {
 
     switch (action.type) {
         case 'SET_ACTIVE_IMAGE':
-            // console.log("SETTING ACTIVE IMAGE CONSOLE LOGGG")
             console.log(action.id)
             return action.id
     }

@@ -54,8 +54,10 @@ class InfoContainerView extends Component {
                 <ItemTitle title={title}/>
                 <ItemPrice price={price}/>
                 <ItemDescription desc={desc}/>
+                
                 <CustomDropdownButton/>
                 <CustomAddToCartButton canAddToCart={true}/>
+
                 <TitleDescriptionBlock/>
                 <TitleDescriptionBlock/>
                 <TitleDescriptionBlock/>
