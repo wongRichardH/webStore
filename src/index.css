@@ -56,3 +56,15 @@ li a {
 
   float:right;
 }
+
+.customDropDownMenu {
+  float: left;
+  font-size: 0.75em;
+  width: 100%;
+  cursor: pointer;
+
+  border: 1px solid;
+
+  max-width: 295px;
+  height: 48px;
+}

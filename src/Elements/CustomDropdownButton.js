@@ -1,24 +1,29 @@
 import React  from 'react'
-import styled from 'styled-components';
-
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownItem';
-import DropdownItem from 'react-bootstrap/DropdownItem';
-
+import styled from 'styled-components'
+import '../index.css'
 
 const styledSelect = styled.select`
-    width:200px;
+    width: 150;
+    height: 40;
+    float: left;
 `
 
 const CustomDropdownButton = (props) => {
 
     return (
         <div>
-            <select style={{width: 100, height: 40, float:"left"}}>
+            <select class="customDropDownMenu">
+                <option>SELECT A SIZE</option>
                 <option>SMALL</option>
                 <option>MEDIUM</option>
                 <option>LARGE</option>
             </select>
+
+            {/* <styledSelect>
+                <option>SMALL</option>
+                <option>MEDIUM</option>
+                <option>LARGE</option>
+            </styledSelect> */}
         </div>
     )
 }

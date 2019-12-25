@@ -52,13 +52,16 @@ class InfoContainerView extends Component {
 
         return (
             <InfoContainerWrapper>
-                
+
                 <ItemTitle title={title}/>
                 <ItemPrice price={price}/>
                 <ItemDescription desc={desc}/>
                 <CustomDropdownButton/>
                 <CustomAddToCartButton canAddToCart={true}/>
                 <TitleDescriptionBlock/>
+                <TitleDescriptionBlock/>
+                <TitleDescriptionBlock/>
+
 
             </InfoContainerWrapper>
         )

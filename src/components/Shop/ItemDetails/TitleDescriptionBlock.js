@@ -2,21 +2,17 @@ import React  from 'react'
 import styled from 'styled-components';
 
 const Title = styled.h1`
-    /* letter-spacing: 0.125em; */
-    /* font-size: 1.625em; */
-    /* margin-bottom: 1.125em; */
-    /* text-transform: uppercase; */
-    /* font-weight: 400; */
     float: left;
+
 `;
 
 const Description = styled.div`
-    /* letter-spacing: 0.125em; */
-    /* font-size: 1.625em; */
-    /* margin-bottom: 1.125em; */
-    /* text-transform: uppercase; */
-    /* font-weight: 400; */
+    // letter-spacing: 0.125em;
+    font-size: 1.125em;
     float: left;
+    font-weight: 400;
+    line-height: 1.6;
+    font-kerning: normal;
 `;
 
 const TitleDescriptionBlock = (props) => {
