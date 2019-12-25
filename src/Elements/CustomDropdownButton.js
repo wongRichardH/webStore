@@ -2,11 +2,14 @@ import React  from 'react'
 import styled from 'styled-components'
 import '../index.css'
 
-const styledSelect = styled.select`
-    width: 150;
-    height: 40;
-    float: left;
-`
+// const styledSelect = styled.select`
+//     width: 150;
+//     height: 40;
+//     float: left;
+//     // padding-left: 5px;
+
+//     text-indent: 5px;
+// `
 
 const CustomDropdownButton = (props) => {
 

@@ -93,4 +93,10 @@ li a {
 
   margin-top: 10px;
   margin-bottom: 10px;
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0px;
+  appearance: none;
+  padding: 5px;
 }
