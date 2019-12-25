@@ -1,10 +1,12 @@
 import React  from 'react'
 import styled from 'styled-components';
+// import { Left } from 'react-bootstrap/lib/Media';
+import { connect } from 'react-redux';
 
 const StyledButton = styled.button`
-    // width: 295px;
     width: 100%;
-    max-width: 295px;
+    // max-width: 295px;
+    max-width: ${(props) => props.isOnMobileDevice == true ? "100%" : "295px"};
     height: 48px;
     border-width: 1px;
     padding: 5px;
@@ -17,25 +19,21 @@ const StyledButton = styled.button`
         color: black;
     }
 
-    float:left;
-
-    // margin-top: 10px;
-    // margin-bottom: 10px;
-
+    float: ${(props) => props.isOnMobileDevice == true ? "center" : "left"}
 `
 
 const CustomAddToCartButton = (props) => {
 
     var addToCartButton = (
         <div>
-            <StyledButton disabled> MAKE A SELECTION </StyledButton>
+            <StyledButton disabled isOnMobileDevice={props.isOnMobileDevice}> MAKE A SELECTION </StyledButton>
         </div>
     )
 
     if (props.canAddToCart) {
         addToCartButton = (
             <div>
-                <StyledButton addToCart> ADD TO CART </StyledButton>
+                <StyledButton addToCart isOnMobileDevice={props.isOnMobileDevice}> ADD TO CART </StyledButton>
             </div>
         )    
     }
@@ -47,4 +45,13 @@ const CustomAddToCartButton = (props) => {
     )
 }
 
-export default CustomAddToCartButton;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        //Check for Mobile
+        isOnMobileDevice: state.isOnMobileDevice == true ? true : false
+    }
+}
+
+export default connect(mapStateToProps)(CustomAddToCartButton);
+
+// export default CustomAddToCartButton;
