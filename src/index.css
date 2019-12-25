@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'liberation-sans-regular';
+  src: url(fonts/LiberationSans-Regular.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'liberation-sans-bold';
+  src: url(fonts/LiberationSans-Bold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-neue-regular';
+  src: url(fonts/HelveticaNeueMed.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-neue-light';
+  src: url(fonts/HelveticaNeueLt.ttf);
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -14,7 +38,6 @@ code {
 
 li {
   display: inline;
-  /* float: right; */
 }
 
 li a {
@@ -22,4 +45,58 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+/*------ ITEM DETAIL ------*/
+/* .topContainer {
+  background-color: blue;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+} */
+
+/*LEFT CONTAINER*/
+.leftGalleryContainer {
+  max-width: 50%;
+  background-color:green;
+
+  float:left;
+}
+
+.gallery {
+  max-width: 100%;
+}
+
+.active {
+  max-width: 100%;
+}
+
+/*RIGHT CONTAINER*/
+.rightProductInfoContainer {
+  max-width: 50%;
+  background-color: red;
+
+  float:right;
+}
+
+.customDropDownMenu {
+  float: left;
+  font-size: 0.75em;
+  width: 100%;
+  cursor: pointer;
+
+  border: 1px solid;
+
+  max-width: 295px;
+  height: 48px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0px;
+  appearance: none;
+  padding: 10px;
 }
