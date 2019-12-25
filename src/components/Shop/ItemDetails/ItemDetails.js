@@ -9,7 +9,7 @@ import InfoContainerView from './InfoContainerView';
 
 
 const TopContainerFormat = styled.div `
-    background-color: lightpink;
+    // background-color: lightpink;
     width: 100%;
     height: 300px;
     display: flex;
@@ -18,7 +18,7 @@ const TopContainerFormat = styled.div `
 
 const GalleryComponentFormat = styled.div `
     width: 50%;
-    background-color: yellow;
+    // background-color: yellow;
     text-align: center;
     display:flex;
     flex-direction:column;
@@ -26,8 +26,9 @@ const GalleryComponentFormat = styled.div `
 
 const InfoContainerFormat = styled.div `
     width: 50%;
-    background-color: yellow;
+    // background-color: yellow;
     text-align: center;
+    margin: 15px;
 `;
 
 class ItemDetails extends Component {
