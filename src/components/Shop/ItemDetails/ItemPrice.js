@@ -2,9 +2,11 @@ import React  from 'react'
 import styled from 'styled-components';
 
 const PriceWrapper = styled.div`
-    float:left;
-    font-size: 1.25em;
-    font-weight: 400;
+    // float:left;
+
+    text-align: left;
+    font-size: 19.6px;
+    font-weight: 700;
 
 `;
 
