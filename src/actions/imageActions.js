@@ -17,10 +17,3 @@ export const ADD_TO_CART_ACTION = (id) => {
         id: id
     }
 }
-
-// export function setImage(id) {
-//     return {
-//         type: 'SET_ACTIVE_IMAGE',
-//         id: id
-//     }
-// }

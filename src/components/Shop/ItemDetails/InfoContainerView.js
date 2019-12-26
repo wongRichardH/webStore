@@ -11,6 +11,8 @@ import styled from 'styled-components';
 import CustomDropdownButton from '../../../Elements/CustomDropdownButton';
 import CustomAddToCartButton from '../../../Elements/CustomAddToCartButton';
 
+import SizeAndAddCart from './SizeAndAddCart';
+
 const InfoContainerWrapper = styled.div `
     display:flex;
     flex-direction: column;
@@ -21,6 +23,10 @@ class InfoContainerView extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    addToCart = (e) => {
+        console.log("add to cart bubbled up")
     }
 
     render() {
@@ -54,14 +60,12 @@ class InfoContainerView extends Component {
                 <ItemTitle title={title}/>
                 <ItemPrice price={price}/>
                 <ItemDescription desc={desc}/>
-                
-                <CustomDropdownButton/>
-                <CustomAddToCartButton canAddToCart={true}/>
+
+                <SizeAndAddCart/>
 
                 <TitleDescriptionBlock/>
                 <TitleDescriptionBlock/>
                 <TitleDescriptionBlock/>
-
 
             </InfoContainerWrapper>
         )
