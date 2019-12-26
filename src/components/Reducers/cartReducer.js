@@ -73,6 +73,10 @@ const cartReducer = (state = initState, action) => {
         case 'SET_ACTIVE_IMAGE':
             console.log(action.id)
             return action.id
+
+        case 'ADD_TO_CART':
+            console.log(action.id)
+            return action.id
     }
 
 
