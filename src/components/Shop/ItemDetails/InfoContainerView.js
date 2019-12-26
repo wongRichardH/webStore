@@ -26,7 +26,7 @@ class InfoContainerView extends Component {
     }
 
     addToCart = (e) => {
-        console.log("add to cart bubbled up")
+        console.log("back at item details")
     }
 
     render() {
@@ -61,7 +61,7 @@ class InfoContainerView extends Component {
                 <ItemPrice price={price}/>
                 <ItemDescription desc={desc}/>
 
-                <SizeAndAddCart/>
+                <SizeAndAddCart addToCart={this.addToCart}/>
 
                 <TitleDescriptionBlock/>
                 <TitleDescriptionBlock/>

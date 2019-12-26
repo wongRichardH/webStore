@@ -1,9 +1,4 @@
 import {
-    SET_ACTIVE_IMAGE, 
-    setActiveImage
-} from '../../actions/imageActions'
-
-import {
     isMobile
   } from "react-device-detect";
 

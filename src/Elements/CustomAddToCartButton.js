@@ -33,7 +33,12 @@ const CustomAddToCartButton = (props) => {
     if (props.canAddToCart) {
         addToCartButton = (
             <div>
-                <StyledButton addToCart isOnMobileDevice={props.isOnMobileDevice}> ADD TO CART </StyledButton>
+                <StyledButton 
+                addToCart isOnMobileDevice={props.isOnMobileDevice} 
+                onClick = {props.handleClick}> 
+                
+                ADD TO CART 
+                </StyledButton>
             </div>
         )    
     }

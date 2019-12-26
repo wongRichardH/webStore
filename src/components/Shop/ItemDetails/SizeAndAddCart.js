@@ -1,24 +1,25 @@
 import React, {Component}  from 'react'
-
 import CustomDropdownButton from '../../../Elements/CustomDropdownButton';
 import CustomAddToCartButton from '../../../Elements/CustomAddToCartButton';
 
-class SizeAndAddCart extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+const SizeAndAddCart = (props) => {
 
-    render() {
+    console.log("SIZEANDADDCART PROPS")
+    console.log(props)
 
-        return (
-            <div>
-                <CustomDropdownButton/>
-                <CustomAddToCartButton canAddToCart={true} />
-            </div>
+    return (
+        <div>
+            <CustomDropdownButton/>
 
-        )
-    }
+            <CustomAddToCartButton 
+            canAddToCart={true} 
+            // handleClick = {this.addToCart}/>
+            handleClick = {props.addToCart}/>
+        </div>
+
+    )
+    
 }
 
 export default SizeAndAddCart;

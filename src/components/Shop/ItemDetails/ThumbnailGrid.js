@@ -31,14 +31,6 @@ const StyledGrid = styled.div`
 
 const ThumbnailGrid = (props) => {
 
-    console.log("initial load")
-    console.log(props)
-
-    function testFunc() {
-        console.log("Button Clicked")
-        console.log(props)
-    }
-
     let productImages = props.productImages.map( (eachItem, index) => {
         return (
             <StyledGrid key={index}>
