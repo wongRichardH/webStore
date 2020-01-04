@@ -8,10 +8,9 @@ import { connect } from 'react-redux';
 import '../../../index';
 import styled from 'styled-components';
 
-import CustomDropdownButton from '../../../Elements/CustomDropdownButton';
-import CustomAddToCartButton from '../../../Elements/CustomAddToCartButton';
-
 import SizeAndAddCart from './SizeAndAddCart';
+
+import {ADD_TO_CART_ACTION} from '../../../actions/imageActions'
 
 const InfoContainerWrapper = styled.div `
     display:flex;
@@ -25,7 +24,13 @@ class InfoContainerView extends Component {
         super(props);
     }
 
-    addToCart = (e) => {
+    handleAddToCart = () => {
+
+        console.log(this.props)
+
+        const itemID = 16159;
+        this.props.addToCart(itemID);
+
         console.log("back at item details")
     }
 
@@ -61,7 +66,7 @@ class InfoContainerView extends Component {
                 <ItemPrice price={price}/>
                 <ItemDescription desc={desc}/>
 
-                <SizeAndAddCart addToCart={this.addToCart}/>
+                <SizeAndAddCart addToCart={this.handleAddToCart}/>
 
                 <TitleDescriptionBlock/>
                 <TitleDescriptionBlock/>
@@ -72,4 +77,15 @@ class InfoContainerView extends Component {
     }
 }
 
-export default InfoContainerView;
+const mapDispatchToProps= (dispatch)=>{
+    
+    return{
+        addToCart: (id) => {
+            dispatch(ADD_TO_CART_ACTION(id))
+        }
+    }
+}
+
+
+// export default InfoContainerView;
+export default connect(null, mapDispatchToProps)(InfoContainerView);
