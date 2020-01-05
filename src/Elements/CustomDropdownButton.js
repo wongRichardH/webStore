@@ -1,56 +1,44 @@
-import React  from 'react'
+import React, {Component}  from 'react'
 import styled from 'styled-components'
 import '../index.css'
 
 import { connect } from 'react-redux';
 
+class CustomDropdownButton extends Component {
 
-// const styledSelect = styled.select`
-// float: left;
-// font-size: 0.75em;
-// width: 100%;
-// cursor: pointer;
+    constructor(props) {
+        super(props);
+        this.state = {value: "0"};
+    
+        this.handleChange = this.handleChange.bind(this);
+    }
+    
+    handleChange(event) {
+        this.setState({value: event.target.value});
 
-// border: 1px solid;
+        console.log("clicked handle change")
 
-// max-width: 295px;
-// height: 48px;
+        console.log(this.props)
 
-// margin-top: 10px;
-// margin-bottom: 10px;
+        this.props.handleClick(event.target.value)
+    }
 
-// -webkit-appearance: none;
-// -moz-appearance: none;
-// -webkit-border-radius: 0px;
-// appearance: none;
-// padding: 10px;
-// `
+    render() {
 
-const CustomDropdownButton = (props) => {
+        const isOnMobileDevice = this.props.isOnMobileDevice == true ? "mobileCustomDropDownMenu" : "customDropDownMenu";
 
-    // console.log("PRINTING CUSTOMDROPDOWNBUTTON PROPS")
-    // console.log(props)
-
-    const isOnMobileDevice = props.isOnMobileDevice == true ? "mobileCustomDropDownMenu" : "customDropDownMenu";
-
-    return (
-        <div>
-            <select className= {isOnMobileDevice}>
-                <option>SELECT A SIZE</option>
-                <option>SMALL</option>
-                <option>MEDIUM</option>
-                <option>LARGE</option>
-            </select>
-
-            {/* <styledSelect>
-                <option>SMALL</option>
-                <option>MEDIUM</option>
-                <option>LARGE</option>
-            </styledSelect> */}
-        </div>
-    )
+        return(
+            <div>
+                <select value={this.state.value} onChange={this.handleChange} className= {isOnMobileDevice}>
+                    <option value="0">SELECT A SIZE</option>
+                    <option value="1">SMALL</option>
+                    <option value="2">MEDIUM</option>
+                    <option value="3">LARGE</option>
+                </select>
+            </div>
+        )
+    }
 }
-
 
 const mapStateToProps = (state, ownProps) => {
     return {
