@@ -1,11 +1,9 @@
 import React  from 'react'
 import styled from 'styled-components';
-// import { Left } from 'react-bootstrap/lib/Media';
 import { connect } from 'react-redux';
 
 const StyledButton = styled.button`
     width: 100%;
-    // max-width: 295px;
     max-width: ${(props) => props.isOnMobileDevice == true ? "100%" : "295px"};
     height: 48px;
     border-width: 1px;

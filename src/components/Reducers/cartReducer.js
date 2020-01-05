@@ -21,7 +21,7 @@ const initState = {
         {id:1,
             title:'Winter Body', 
             desc: "Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description Winter Body Description", 
-            price:110.0, 
+            price:110.00, 
             img: [ytg1, ytg2, ytg3, ytg4, ytg5, ytg6]
         },
 
@@ -62,15 +62,32 @@ const initState = {
 
 const cartReducer = (state = initState, action) => {
 
-    console.log(action.type)
-
     switch (action.type) {
-        case 'ADD_TO_CART_ACTION':
-            console.log("Reached ADD TO CART ACTION")
-            console.log(action.id)
-            return action.id
-    }
 
+        case 'ADD_TO_CART_ACTION':
+            
+            let addedItem = state.items.find(item => item.id === action.id)
+
+            if (addedItem) {
+                console.log("Item found")
+
+                let newTotal = (state.total + addedItem.price)
+                console.log("About to print newTotal")
+                console.log(newTotal)
+
+                return {
+                    ...state,
+                    total: newTotal
+                }
+
+            } else {
+                console.log("Item not found")
+
+                return {
+                    ...state,
+                }
+            }
+    }
 
     return state;
 }

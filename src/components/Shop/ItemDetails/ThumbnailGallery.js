@@ -19,13 +19,13 @@ class ThumbnailGallery extends Component {
         }
     }
 
-    componentDidMount() {
-        console.log(this.props.productDetails.desc)
-        // console.log(this.props.desc)
-    }
+    // componentDidMount() {
+    //     console.log(this.props.productDetails.desc)
+    //     // console.log(this.props.desc)
+    // }
 
     handleClick = (e) => {
-        console.log(e.target.getAttribute('data-index'))
+        // console.log(e.target.getAttribute('data-index'))
 
         const newActiveIndex = e.target.getAttribute('data-index')
         this.setState({activeIndex: newActiveIndex})

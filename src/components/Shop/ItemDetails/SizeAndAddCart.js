@@ -5,8 +5,8 @@ import CustomAddToCartButton from '../../../Elements/CustomAddToCartButton';
 
 const SizeAndAddCart = (props) => {
 
-    console.log("SIZEANDADDCART PROPS")
-    console.log(props)
+    // console.log("SIZEANDADDCART PROPS")
+    // console.log(props)
 
     return (
         <div>

@@ -28,8 +28,8 @@ import { connect } from 'react-redux';
 
 const CustomDropdownButton = (props) => {
 
-    console.log("PRINTING CUSTOMDROPDOWNBUTTON PROPS")
-    console.log(props)
+    // console.log("PRINTING CUSTOMDROPDOWNBUTTON PROPS")
+    // console.log(props)
 
     const isOnMobileDevice = props.isOnMobileDevice == true ? "mobileCustomDropDownMenu" : "customDropDownMenu";
 

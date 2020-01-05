@@ -31,14 +31,14 @@ const InfoContainerFormat = styled.div `
 
 class ItemDetails extends Component {
 
-    componentDidMount() {
-        console.log("COMPONENT JUST MOUNTED")
-        console.log(this.props)
-    }
+    // componentDidMount() {
+    //     console.log("COMPONENT JUST MOUNTED")
+    //     console.log(this.props)
+    // }
 
     render() {
 
-        console.log("COMPONENT ABOUT TO RENDER")
+        // console.log("COMPONENT ABOUT TO RENDER")
         console.log(this.props)
 
         var foundClothingItem = this.props.foundItem;

@@ -25,13 +25,9 @@ class InfoContainerView extends Component {
     }
 
     handleAddToCart = () => {
-
         console.log(this.props)
-
-        const itemID = 16159;
+        const itemID = this.props.productDetails.id;
         this.props.addToCart(itemID);
-
-        console.log("back at item details")
     }
 
     render() {
