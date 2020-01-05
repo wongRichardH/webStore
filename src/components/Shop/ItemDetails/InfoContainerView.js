@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 import SizeAndAddCart from './SizeAndAddCart';
 
-import {ADD_TO_CART_ACTION} from '../../../actions/imageActions'
+import {ADD_TO_CART_ACTION} from '../../../actions/actionCreators'
 
 const InfoContainerWrapper = styled.div `
     display:flex;
