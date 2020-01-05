@@ -67,25 +67,37 @@ const cartReducer = (state = initState, action) => {
         case 'ADD_TO_CART_ACTION':
             
             let addedItem = state.items.find(item => item.id === action.id)
+            let existed_item = state.addedItems.find(item => action.id === item.id)
 
             if (addedItem) {
-                console.log("Item found")
+                console.log("SUCCESSFUL: ITEM FOUND")
 
-                let newTotal = (state.total + addedItem.price)
-                console.log("About to print newTotal")
-                console.log(newTotal)
+                if (existed_item) {
+                    console.log("ITEM PREVIOUSLY EXISTED IN CART")
 
-                return {
-                    ...state,
-                    total: newTotal
+                    addedItem.quantity += 1 
+
+                    return {
+                       ...state,
+                        total: state.total + addedItem.price 
+                    }
+
+                } else {
+                    console.log("ADDING NEW ITEM TO CART")
+
+                    addedItem.quantity = 1;
+
+                    let newTotal = (state.total + addedItem.price)
+            
+                    return {
+                        ...state,
+                        addedItems: [...state.addedItems, addedItem],
+                        total : newTotal
+                    }
                 }
 
             } else {
-                console.log("Item not found")
-
-                return {
-                    ...state,
-                }
+                console.log("FAIL: ITEM NOT FOUND")
             }
     }
 
