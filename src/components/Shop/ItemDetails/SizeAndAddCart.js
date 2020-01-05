@@ -21,7 +21,7 @@ class SizeAndAddCart extends Component {
         if (e != sizes.NO_SELECTION) {
             this.canAddToCart = true
         } else {
-            this.propscanAddToCart = false
+            this.canAddToCart = false
         }
 
         this.forceUpdate();
