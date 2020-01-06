@@ -57,7 +57,9 @@ const initState = {
     ],
     addedItems: [],
     total: 0,
-    isOnMobileDevice: (isMobile) == true ? true : false
+    isOnMobileDevice: (isMobile) == true ? true : false,
+
+    selectedSize: "0"
 }
 
 const cartReducer = (state = initState, action) => {
@@ -69,23 +71,48 @@ const cartReducer = (state = initState, action) => {
             let addedItem = state.items.find(item => item.id === action.id)
             let existed_item = state.addedItems.find(item => action.id === item.id)
 
+            // // console.log("Selected Size is:")
+            // // console.log(state.selectedSize)
+
             if (addedItem) {
-                console.log("SUCCESSFUL: ITEM FOUND")
+                // console.log("SUCCESSFUL: ITEM FOUND")
 
                 if (existed_item) {
                     console.log("ITEM PREVIOUSLY EXISTED IN CART")
 
-                    addedItem.quantity += 1 
+                    //If item exists, check if user is adding same size of product
+                    if (existed_item) {
+                        if (existed_item.selectedSize == state.selectedSize) {
 
-                    return {
-                       ...state,
-                        total: state.total + addedItem.price 
+                            console.log("FOUND SAME SIZE")
+
+                            addedItem.quantity += 1
+
+                            let newTotal = (state.total + addedItem.price)
+
+                            return {
+                                ...state,
+                                total : newTotal
+                            }
+                        } else {
+                            addedItem.quantity = 1
+                            addedItem.selectedSize = state.selectedSize
+
+                            console.log("FOUND SAME ITEM BUT DIFFERENT SIZE")
+
+                            return {
+                                ...state,
+                                addedItems: [...state.addedItems, addedItem],
+                                 total: state.total + addedItem.price 
+                             }
+                        }
                     }
 
                 } else {
-                    console.log("ADDING NEW ITEM TO CART")
+                    console.log("ADDING COMPLETELY NEW ITEM TO CART")
 
                     addedItem.quantity = 1;
+                    addedItem.selectedSize = state.selectedSize
 
                     let newTotal = (state.total + addedItem.price)
             
@@ -98,6 +125,14 @@ const cartReducer = (state = initState, action) => {
 
             } else {
                 console.log("FAIL: ITEM NOT FOUND")
+            }
+
+
+        case 'SELECT_SIZE_ACTION':
+
+            return {
+                ...state,
+                selectedSize: action.id
             }
     }
 

@@ -16,7 +16,7 @@ class SizeAndAddCart extends Component {
     }
     
     handleSelectionChange = (e) => {
-        console.log(e)
+        // console.log(e)
 
         if (e != sizes.NO_SELECTION) {
             this.canAddToCart = true

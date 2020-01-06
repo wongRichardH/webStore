@@ -4,6 +4,8 @@ import '../index.css'
 
 import { connect } from 'react-redux';
 
+import {SELECT_SIZE_ACTION} from '../actions/actionCreators'
+
 class CustomDropdownButton extends Component {
 
     constructor(props) {
@@ -16,10 +18,10 @@ class CustomDropdownButton extends Component {
     handleChange(event) {
         this.setState({value: event.target.value});
 
-        console.log("clicked handle change")
+        //mapDispatchToProps
+        this.props.selectSize(event.target.value)
 
-        console.log(this.props)
-
+        //addToCart
         this.props.handleClick(event.target.value)
     }
 
@@ -47,4 +49,13 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps)(CustomDropdownButton);
+const mapDispatchToProps= (dispatch)=>{
+    
+    return{
+        selectSize: (id) => {
+            dispatch(SELECT_SIZE_ACTION(id))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CustomDropdownButton);

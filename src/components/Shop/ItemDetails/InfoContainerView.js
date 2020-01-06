@@ -28,9 +28,16 @@ class InfoContainerView extends Component {
         console.log(this.props)
         const itemID = this.props.productDetails.id;
         this.props.addToCart(itemID);
+
+        console.log("FINISHED ADDING TO CART")
     }
 
     render() {
+
+        console.log("InfoContainerView just rendered")
+
+        console.log("NEW STATE IS:")
+        console.log(this.props.addedItems)
 
         var foundClothingItem = this.props.productDetails;
         console.log(foundClothingItem);
@@ -73,6 +80,13 @@ class InfoContainerView extends Component {
     }
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+        //Check for Mobile
+        addedItems : state.addedItems 
+    }
+}
+
 const mapDispatchToProps= (dispatch)=>{
     
     return{
@@ -84,4 +98,4 @@ const mapDispatchToProps= (dispatch)=>{
 
 
 // export default InfoContainerView;
-export default connect(null, mapDispatchToProps)(InfoContainerView);
+export default connect(mapStateToProps, mapDispatchToProps)(InfoContainerView);

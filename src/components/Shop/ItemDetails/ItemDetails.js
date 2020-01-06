@@ -81,7 +81,7 @@ class ItemDetails extends Component {
 const mapStateToProps = (state, ownProps) => {
 
     let id = Number(ownProps.match.params.itemID);
-    console.log(id)
+    // console.log(id)
 
     return {
         //Search through our cartReducer. if an id is found from that matches our params, store that in the vaariable "items"

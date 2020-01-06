@@ -12,8 +12,6 @@ const PriceWrapper = styled.div`
 
 const ItemPrice = (props) => {
 
-    console.log(55)
-
     return (
 
         <div>
