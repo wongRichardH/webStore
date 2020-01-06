@@ -82,7 +82,10 @@ const cartReducer = (state = initState, action) => {
 
                     //If item exists, check if user is adding same size of product
                     if (existed_item) {
-                        if (existed_item.selectedSize == state.selectedSize) {
+
+                        console.log(`existingItem: ${existed_item.selectedSize}, state.selectedSize: ${state.selectedSize}`)
+
+                        if (existed_item.selectedSize == state.selectedSize) { //Same Item, Same Size
 
                             console.log("FOUND SAME SIZE")
 
@@ -94,7 +97,9 @@ const cartReducer = (state = initState, action) => {
                                 ...state,
                                 total : newTotal
                             }
-                        } else {
+
+                        } else { //Same Item, Different Size 
+
                             addedItem.quantity = 1
                             addedItem.selectedSize = state.selectedSize
 
@@ -103,12 +108,12 @@ const cartReducer = (state = initState, action) => {
                             return {
                                 ...state,
                                 addedItems: [...state.addedItems, addedItem],
-                                 total: state.total + addedItem.price 
+                                total: state.total + addedItem.price 
                              }
                         }
                     }
 
-                } else {
+                } else {//New Item
                     console.log("ADDING COMPLETELY NEW ITEM TO CART")
 
                     addedItem.quantity = 1;

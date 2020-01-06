@@ -30,6 +30,11 @@ class InfoContainerView extends Component {
         this.props.addToCart(itemID);
 
         console.log("FINISHED ADDING TO CART")
+
+        console.log("======================================")
+        console.log("NEW STATE IS:")
+        console.log(this.props.addedItems)
+        console.log(`Current total price: ${this.props.total}`)
     }
 
     render() {
