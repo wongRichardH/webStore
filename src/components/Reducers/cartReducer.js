@@ -98,7 +98,6 @@ const cartReducer = (state = initState, action) => {
                             console.log("FOUND SAME SIZE")
 
                             addedItem.quantity += 1
-
                             let newTotal = (state.total + addedItem.price)
 
                             return {
@@ -108,16 +107,17 @@ const cartReducer = (state = initState, action) => {
 
                         } else { //Same Item, Different Size 
 
-                            addedItem.quantity = 1
-                            addedItem.selectedSize = state.selectedSize
+                            let newItem = Object.assign({}, addedItem)
+                            newItem.quantity = 1
+                            newItem.selectedSize = state.selectedSize
 
-                            console.log("FOUND SAME ITEM BUT DIFFERENT SIZE")
+                            let newTotal = (state.total + newItem.price)
 
                             return {
                                 ...state,
-                                addedItems: [...state.addedItems, addedItem],
-                                total: state.total + addedItem.price 
-                             }
+                                addedItems: [...state.addedItems, newItem],
+                                total: newTotal
+                            }
                         }
                     }
 
