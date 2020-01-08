@@ -10,11 +10,11 @@ const TopContainerFormat = styled.div `
     width: 100%;
     height: 300px;
     display: flex;
-    flex-direction: ${(props) => props.isOnMobileDevice == true ? "column" : "row"};
+    flex-direction: ${(props) => props.isOnMobileDevice === true ? "column" : "row"};
 `;
 
 const GalleryComponentFormat = styled.div `
-    width: ${(props) => props.isOnMobileDevice == true ? "100%" : "50%"};
+    width: ${(props) => props.isOnMobileDevice === true ? "100%" : "50%"};
 
     text-align: center;
     display:flex;
@@ -22,7 +22,7 @@ const GalleryComponentFormat = styled.div `
 `;
 
 const InfoContainerFormat = styled.div `
-    width: ${(props) => props.isOnMobileDevice == true ? "100%" : "50%"};
+    width: ${(props) => props.isOnMobileDevice === true ? "100%" : "50%"};
 
     text-align: center;
     // margin: 15px;

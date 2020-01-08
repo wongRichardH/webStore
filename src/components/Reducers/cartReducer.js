@@ -71,11 +71,19 @@ const cartReducer = (state = initState, action) => {
             let addedItem = state.items.find(item => item.id === action.id)
             let existed_item = state.addedItems.find(item => action.id === item.id)
 
-            // // console.log("Selected Size is:")
-            // // console.log(state.selectedSize)
+
+            console.log("New added item is:")
+            console.log(addedItem)
+            console.log("Existing item was:")
+            console.log(existed_item)
+
+            // console.log("PREVIOUS CART ITEMS:")
+            // console.log(state.addedItems)
+
+            console.log("PREVIOUS STATE") 
+            console.log(state)
 
             if (addedItem) {
-                // console.log("SUCCESSFUL: ITEM FOUND")
 
                 if (existed_item) {
                     console.log("ITEM PREVIOUSLY EXISTED IN CART")
@@ -85,7 +93,7 @@ const cartReducer = (state = initState, action) => {
 
                         console.log(`existingItem: ${existed_item.selectedSize}, state.selectedSize: ${state.selectedSize}`)
 
-                        if (existed_item.selectedSize == state.selectedSize) { //Same Item, Same Size
+                        if (existed_item.selectedSize === state.selectedSize) { //Same Item, Same Size
 
                             console.log("FOUND SAME SIZE")
 

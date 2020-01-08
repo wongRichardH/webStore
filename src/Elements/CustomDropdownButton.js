@@ -27,7 +27,7 @@ class CustomDropdownButton extends Component {
 
     render() {
 
-        const isOnMobileDevice = this.props.isOnMobileDevice == true ? "mobileCustomDropDownMenu" : "customDropDownMenu";
+        const isOnMobileDevice = this.props.isOnMobileDevice === true ? "mobileCustomDropDownMenu" : "customDropDownMenu";
 
         return(
             <div>
@@ -45,7 +45,7 @@ class CustomDropdownButton extends Component {
 const mapStateToProps = (state, ownProps) => {
     return {
         //Check for Mobile
-        isOnMobileDevice: state.isOnMobileDevice == true ? true : false
+        isOnMobileDevice: state.isOnMobileDevice === true ? true : false
     }
 }
 
