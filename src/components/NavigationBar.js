@@ -30,6 +30,7 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/shop"> SHOP </Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/about"> ABOUT </Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/contact"> CONTACT </Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/checkout"> Cart: </Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

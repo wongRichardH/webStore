@@ -11,6 +11,7 @@ import ItemDetails from './components/Shop/ItemDetails/ItemDetails';
 import {NoMatch} from './components/NoMatch';
 import {Layout} from './components/Layout';
 import {NavigationBar} from './components/NavigationBar';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Route path = "/contact" exact component= {Contact}></Route>
             <Route path = "/shop" exact component= {Shop}></Route>
             <Route path = "/shop/:itemID" exact strict component= {ItemDetails}></Route>
+
+            <Route path = "/checkout" exact component= {Checkout}></Route>
 
             <Route component={NoMatch}></Route>
           </Switch>

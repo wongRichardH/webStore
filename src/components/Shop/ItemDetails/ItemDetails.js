@@ -48,7 +48,6 @@ class ItemDetails extends Component {
             <div> 
                 <h2> {foundClothingItem.title} </h2> 
                 <h2> {foundClothingItem.desc} </h2> 
-
             </div>
             ) 
 
