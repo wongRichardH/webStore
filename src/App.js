@@ -10,7 +10,7 @@ import ItemDetails from './components/Shop/ItemDetails/ItemDetails';
 
 import {NoMatch} from './components/NoMatch';
 import {Layout} from './components/Layout';
-import {NavigationBar} from './components/NavigationBar';
+import NavigationBar from './components/NavigationBar';
 import Checkout from './components/Checkout/Checkout';
 
 function App() {

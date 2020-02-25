@@ -1,38 +1,40 @@
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react'
 import {Nav, Navbar} from 'react-bootstrap';
 import styled from 'styled-components';
-// import {NavLink} from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Styles = styled.div`
-    .navbar {
-        /* background-color: #222; */
-        background-color: #white; 
+class NavigationBar extends Component {
+    render() {
+        return (
+            <div>
+                <Navbar expand = "lg">
+                    <Navbar.Brand href="/">COMSOC</Navbar.Brand>
+                    <Navbar.Toggle aria-controls = "basic-navbar-nav"/> 
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className = "ml-auto">
+                            <Nav.Item><Nav.Link href="/shop"> SHOP </Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/about"> ABOUT </Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/contact"> CONTACT </Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/checkout"> Cart: {this.props.addedItems.length} </Nav.Link></Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            </div>
+        )
     }
+}
 
-    .navlink&:hover {
-            background-color: blue;
-            color: white;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        addedItems: state.addedItems
     }
-`;
+}
 
-// const NavItemStyle = styled(Nav.Link)`
-//     color: #blue;
-//     font-size: 1em;
-// `;
+const mapDispatchToProps= (dispatch)=>{
+    return{
 
-export const NavigationBar = () => (
-    <Styles>
-        <Navbar expand = "lg">
-            <Navbar.Brand href="/">COMSOC</Navbar.Brand>
-            <Navbar.Toggle aria-controls = "basic-navbar-nav"/> 
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className = "ml-auto">
-                    <Nav.Item><Nav.Link href="/shop"> SHOP </Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/about"> ABOUT </Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/contact"> CONTACT </Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/checkout"> Cart: </Nav.Link></Nav.Item>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    </Styles>
-)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationBar);
