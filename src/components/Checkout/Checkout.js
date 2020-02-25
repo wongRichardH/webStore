@@ -1,7 +1,5 @@
 import React, {Component}  from 'react'
 import { connect } from 'react-redux';
-// import '../../../index';
-import styled from 'styled-components';
 
 class Checkout extends Component {
 
@@ -11,13 +9,16 @@ class Checkout extends Component {
 
     render() {
 
+        // var currentState = store.getState()
         var addedItemsExist = this.props.addedItems;
 
         if (addedItemsExist) {
             addedItemsExist = (
                 <div>
                     <h1> Checkout</h1>
-                    {this.props.addedItems.length} Items Found
+                    Added Items Aray was found: 
+                    <br></br>
+                    {this.props.addedItems.length} Items Found 
                 </div> 
             ) 
 
